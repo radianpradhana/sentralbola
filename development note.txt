@@ -1,0 +1,2 @@
+- CRUD untuk select label (combobox)
+- delete tampilkan modal

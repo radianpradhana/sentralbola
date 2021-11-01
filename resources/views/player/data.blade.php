@@ -14,15 +14,16 @@
     </ol>
   </section>
 
+  <section class="content-header">  
+    <div class="row">
+      <div class="col-md-2">
+        <a href="/player/create" class="btn btn-block btn-primary btn-flat">+ Add Player</a>    
+      </div>
+    </div>
+  </section>
   <!-- Main content -->
   <section class="content">
     <!-- Default box -->
-    <div class="box">
-      <div class="box-body">
-        Nanti ini buat tombol tambah
-      </div>
-      <!-- /.box-body -->
-    </div>
     <!-- /.box -->
 
     <div class="box">
@@ -35,7 +36,6 @@
           <thead>
           <tr>
             <th>Name</th>
-            <th>Gender</th>
             <th>Age</th>
             <th>Club</th>
             <th>Position</th>
@@ -46,11 +46,17 @@
           @foreach($players as $player)
           <tr>
             <td>{{$player->name}}</td>
-            <td>{{$player->gender}}</td>
             <td>{{$player->age}}</td>
             <td>{{$player->club}}</td>
-            <td>{{$player->position}}</td>
-            <td>Edit | Delete</td>
+            <td>{{$player->position }}</td>
+            <td>
+              <a href="/player/{{$player->id}}/edit" class="btn btn-success btn-sm">Edit</a>
+              <form action="/player/{{$player->id}}" method="POST">
+                @method('DELETE')
+                @csrf
+                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+              </form>
+            </td>
           </tr>
           @endforeach
           </tbody>

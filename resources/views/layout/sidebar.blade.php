@@ -14,8 +14,8 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MENU UTAMA</li>
-      <li><a href="/"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
-      <li class="treeview">
+      <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
+      <li class="treeview {{ request()->is('player') ? 'active' : '' }}">
         <a href="#">
           <i class="glyphicon glyphicon-user"></i>
           <span>Pemain</span>

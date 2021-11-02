@@ -27,7 +27,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Enter Name">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
                   <div class="text-danger">
                     @error('name')
                       {{ $message }}
@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group">
                   <label for="age">Age</label>
-                  <input type="number" class="form-control @error('age') is-invalid @enderror" id="age" name="age" placeholder="Enter Age">
+                  <input type="number" class="form-control" id="age" name="age" placeholder="Enter Age">
                   <div class="text-danger">
                     @error('age')
                       {{ $message }}
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group">
                   <label for="club">Club</label>
-                  <input type="text" class="form-control @error('club') is-invalid @enderror" id="club" name="club" placeholder="Enter Club">
+                  <input type="text" class="form-control" id="club" name="club" placeholder="Enter Club">
                   <div class="text-danger">
                     @error('club')
                       {{ $message }}
@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-group">
                   <label for="name">Position</label>
-                  <input type="text" class="form-control @error('position') is-invalid @enderror" id="position" name="position" placeholder="Enter Name">
+                  <input type="text" class="form-control" id="position" name="position" placeholder="Enter Name">
                   <div class="text-danger">
                     @error('position')
                       {{ $message }}

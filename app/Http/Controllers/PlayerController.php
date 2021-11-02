@@ -28,9 +28,14 @@ class PlayerController extends Controller
             'age' => 'required',
             'club' => 'required',
             'position' => 'required'
+        ], [
+            'name.required' => 'Name must be filled',
+            'age.required' => 'Age must be filled',
+            'club.required' => 'Club must be filled',
+            'position.required' => 'Position must be filled'
         ]);
     	Player::create($request->all());
-    	return redirect('/player');
+    	return redirect('/player')->with('notice','Data Added Successfully');
     }
 
     public function edit($id)
@@ -44,7 +49,7 @@ class PlayerController extends Controller
     {
     	$player 	= 	Player::find($id);
     	$player->update($request->all());
-    	return redirect('/player');
+    	return redirect('/player')->with('notice','Data Updated Successfully');;
     }
 
     public function destroy($id)

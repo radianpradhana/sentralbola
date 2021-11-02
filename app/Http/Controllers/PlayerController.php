@@ -22,6 +22,13 @@ class PlayerController extends Controller
 
     public function store(Request $request)
     {
+
+        $validasi_data = $request->validate([
+            'name' => 'required',
+            'age' => 'required',
+            'club' => 'required',
+            'position' => 'required'
+        ]);
     	Player::create($request->all());
     	return redirect('/player');
     }

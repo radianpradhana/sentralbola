@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiPlayerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/player', [ApiPlayerController::class,'index']);
+Route::post('/player', [ApiPlayerController::class,'store']);
+Route::get('/player/{id}', [ApiPlayerController::class,'show']);
+Route::put('/player/{id}', [ApiPlayerController::class,'update']);
+Route::delete('/player/{id}', [ApiPlayerController::class,'destroy']);

@@ -49,13 +49,13 @@ class PlayerController extends Controller
     {
     	$player 	= 	Player::find($id);
     	$player->update($request->all());
-    	return redirect('/player')->with('notice','Data Updated Successfully');;
+    	return redirect('/player')->with('notice','Data Updated Successfully');
     }
 
     public function destroy($id)
     {
     	$player 	= 	Player::find($id);
     	$player->delete();
-    	return redirect('/player');
+    	return redirect('/player')->with('notice','Data Deleted Successfully');
     }
 }

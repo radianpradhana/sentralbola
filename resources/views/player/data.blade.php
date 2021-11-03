@@ -29,6 +29,9 @@
       <div class="col-md-2">
         <a href="/player/create" class="btn btn-block btn-primary btn-flat">+ Add Player</a>    
       </div>
+      <div class="col-md-2">
+        <a href="/player/print_pdf" target="_blank" class="btn btn-block btn-warning btn-flat">Print to PDF</a>    
+      </div>
     </div>
   </section>
   <!-- Main content -->

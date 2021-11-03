@@ -1,2 +1,2 @@
 - CRUD untuk select label (combobox)
-- delete tampilkan modal
+- report print excel

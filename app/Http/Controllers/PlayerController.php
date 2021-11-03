@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Player;
+use Dompdf\Dompdf;
 
 class PlayerController extends Controller
 {
@@ -57,5 +58,18 @@ class PlayerController extends Controller
     	$player 	= 	Player::find($id);
     	$player->delete();
     	return redirect('/player')->with('notice','Data Deleted Successfully');
+    }
+
+    public function print_pdf()
+    {
+        $judul      =   'Master Data';
+        $players    =   Player::all();
+        $html       =   view('player.print_pdf', compact(['judul','players']));
+
+        $dompdf = new Dompdf();
+        $dompdf->loadhtml($html);
+        $dompdf->setPaper('A4','landscape');
+        $dompdf->render();
+        $dompdf->stream();
     }
 }

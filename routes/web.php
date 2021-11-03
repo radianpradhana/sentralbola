@@ -25,5 +25,5 @@ Route::get('/player/create', [PlayerController::class,'create']);
 Route::post('/player', [PlayerController::class,'store']);
 Route::get('/player/{id}/edit', [PlayerController::class,'edit']);
 Route::put('/player/{id}', [PlayerController::class,'update']);
-Route::delete('/player/{id}', [PlayerController::class,'destroy']);
+Route::get('/player/{id}/delete', [PlayerController::class,'destroy']);
 

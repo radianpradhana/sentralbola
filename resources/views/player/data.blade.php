@@ -61,11 +61,18 @@
             <td>{{$player->position }}</td>
             <td>
               <a href="/player/{{$player->id}}/edit" class="btn btn-success btn-sm">Edit</a>
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete{{$player->id}}">
+                Delete
+              </button>
+              <!--
               <form action="/player/{{$player->id}}" method="POST">
                 @method('DELETE')
                 @csrf
-                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete">
+                  Delete
+                </button>
               </form>
+              -->
             </td>
           </tr>
           @endforeach
@@ -74,6 +81,29 @@
       </div>
       <!-- /.box-body -->
     </div>
+
+    @foreach($players as $player)
+    <div class="modal modal-danger fade" id="delete{{$player->id}}">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">{{$player->name}}</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure to delete this data?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
+            <a href="/player/{{$player->id}}/delete" class="btn btn-outline">Yes</a>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    @endforeach
   </section>
   <!-- /.content -->
 </div>

@@ -8,11 +8,24 @@ use Dompdf\Dompdf;
 
 class PlayerController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
-    	$judul 		= 	'Player';
-    	$players	= 	Player::all();
-    	return view('player.data', compact(['judul','players']));
+    	$judul = 'Beranda';
+        return view('main', compact(['judul']));
+    }
+
+    public function player()
+    {
+        $judul      =   'Player';
+        $players    =   Player::all();
+        return view('player.data', compact(['judul','players']));
     }
 
     public function create()

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\HomeController;
 
 
 /*
@@ -15,15 +16,16 @@ use App\Http\Controllers\PlayerController;
 |
 */
 
-Route::get('/', function () {
-	$judul = 'Beranda';
-    return view('main', compact(['judul']));
-});
-
-Route::get('/player', [PlayerController::class,'index']);
+Route::get('/home', [PlayerController::class,'index']);
+Route::get('/player', [PlayerController::class,'player']);
 Route::get('/player/create', [PlayerController::class,'create']);
 Route::post('/player', [PlayerController::class,'store']);
 Route::get('/player/{id}/edit', [PlayerController::class,'edit']);
 Route::put('/player/{id}', [PlayerController::class,'update']);
 Route::get('/player/{id}/delete', [PlayerController::class,'destroy']);
 Route::get('/player/print_pdf', [PlayerController::class,'print_pdf']);
+
+Auth::routes();
+
+Route::get('/', [HomeController::class, 'index']);
+

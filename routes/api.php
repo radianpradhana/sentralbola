@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ApiPlayerController;
+use App\Http\Controllers\ApiPemainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +15,8 @@ use App\Http\Controllers\ApiPlayerController;
 |
 */
 
-Route::get('/player', [ApiPlayerController::class,'index']);
-Route::post('/player', [ApiPlayerController::class,'store']);
-Route::get('/player/{id}', [ApiPlayerController::class,'show']);
-Route::put('/player/{id}', [ApiPlayerController::class,'update']);
-Route::delete('/player/{id}', [ApiPlayerController::class,'destroy']);
+Route::get('/pemain', [ApiPemainController::class,'index']);
+Route::post('/pemain', [ApiPemainController::class,'store']);
+Route::get('/pemain/{id}', [ApiPemainController::class,'show']);
+Route::put('/pemain/{id}', [ApiPemainController::class,'update']);
+Route::delete('/pemain/{id}', [ApiPemainController::class,'destroy']);

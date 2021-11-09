@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIPLAYER | Register</title>
+  <title>SENTRALBOLA | Register</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -30,7 +30,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <b>SIPLAYER</b>
+    <b>SENTRALBOLA</b>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -38,9 +38,9 @@
     <form method="POST" action="{{ route('register') }}">
       @csrf
       <div class="form-group has-feedback">
-        <input type="text" name="name" class="form-control" placeholder="Full Name">
+        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
-        @error('name')
+        @error('nama')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -65,7 +65,7 @@
         @enderror
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="password_confirmation" class="form-control" placeholder="Retype Password">
+        <input type="password" name="password_confirmation" class="form-control" placeholder="Ketik Ulang Password">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">
@@ -77,14 +77,14 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Daftar</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
 
-    <a href="{{ route('login') }}" class="text-center">Login Now</a>
+    <a href="{{ route('login') }}" class="text-center">Login Sekarang</a>
 
   </div>
   <!-- /.login-box-body -->

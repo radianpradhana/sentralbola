@@ -19,7 +19,7 @@
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">SIPLAYER (Sistem Informasi Player)</h3>
+        <h3 class="box-title">SENTRALBOLA</h3>
 
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="box-body">
-        Welcome di salah satu sistem informasi pemain bola terbesar di seluruh. . . . .impian Ryan =))
+        Welcome di salah satu sistem informasi pemain bola terbesar di seluruh dunia
       </div>
       <!-- /.box-body -->
     </div>

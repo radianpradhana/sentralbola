@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Edit Player')
+@section('title', 'Rubah Pemain')
 
 @section('content')
 <div class="content-wrapper">
@@ -22,32 +22,36 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <!-- form start -->
-            <form role="form" action="/player/{{$player->id}}" method="POST">
+            <form role="form" action="/pemain/{{$pemain->id}}" method="POST">
               @method('PUT')
               @csrf
               <div class="box-body">
                 <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" value="{{$player->name}}">
+                  <label for="name">Nama</label>
+                  <input type="text" class="form-control" id="nama" name="nama" value="{{$pemain->nama}}">
                 </div>
                 <div class="form-group">
-                  <label for="age">Age</label>
-                  <input type="number" class="form-control" id="age" name="age" value="{{$player->age}}">
+                  <label for="negara">Negara</label>
+                  <input type="text" class="form-control" id="negara" name="negara" value="{{$pemain->negara}}">
                 </div>
                 <div class="form-group">
-                  <label for="club">Club</label>
-                  <input type="text" class="form-control" id="club" name="club" value="{{$player->club}}">
+                  <label for="usia">Usia</label>
+                  <input type="number" class="form-control" id="usia" name="usia" value="{{$pemain->usia}}">
                 </div>
                 <div class="form-group">
-                  <label for="name">Position</label>
-                  <input type="text" class="form-control" id="position" name="position" value="{{$player->position}}">
+                  <label for="klub">Klub</label>
+                  <input type="text" class="form-control" id="klub" name="klub" value="{{$pemain->klub}}">
+                </div>
+                <div class="form-group">
+                  <label for="posisi">Posisi</label>
+                  <input type="text" class="form-control" id="posisi" name="posisi" value="{{$pemain->posisi}}">
                 </div>
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <a href="/player" class="btn btn-primary">Back</a>
+                <input type="submit" class="btn btn-primary" value="Simpan">
+                <a href="/pemain" class="btn btn-primary">Kembali</a>
               </div>
             </form>
           </div>

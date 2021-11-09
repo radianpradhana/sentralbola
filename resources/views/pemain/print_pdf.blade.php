@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SIPLAYER | {{ $judul }}</title>
+  <title>SENTRALBOLA | {{ $judul }}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          Rekap Data Pemain SIPLAYER
+          Rekap Data Pemain Sentral Bola
         </h2>
       </div>
       <!-- /.col -->
@@ -45,19 +45,21 @@
         <table class="table table-striped">
           <thead>
           <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Club</th>
-            <th>Position</th>
+            <th>Nama</th>
+            <th>Negara</th>
+            <th>No. Punggung</th>
+            <th>Klub</th>
+            <th>Posisi</th>
           </tr>
           </thead>
           <tbody>
-          @foreach($players as $player)
+          @foreach($pemain_semua as $pemain)
           <tr>
-            <td>{{$player->name}}</td>
-            <td>{{$player->age}}</td>
-            <td>{{$player->club}}</td>
-            <td>{{$player->position }}</td>
+            <td>{{$pemain->nama}}</td>
+            <td>{{$pemain->negara}}</td>
+            <td>{{$pemain->no_punggung}}</td>
+            <td>{{$pemain->klub}}</td>
+            <td>{{$pemain->posisi }}</td>
           </tr>
           @endforeach
           </tbody>

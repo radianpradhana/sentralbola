@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Add Player')
+@section('title', 'Tambah Pemain')
 
 @section('content')
 <div class="content-wrapper">
@@ -22,41 +22,50 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <!-- form start -->
-            <form role="form" action="/player" method="POST">
+            <form role="form" action="/pemain" method="POST">
               @csrf
               <div class="box-body">
                 <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama">
                   <div class="text-danger">
-                    @error('name')
+                    @error('nama')
                       {{ $message }}
                     @enderror
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="age">Age</label>
-                  <input type="number" class="form-control" id="age" name="age" placeholder="Enter Age">
+                  <label for="negara">Negara</label>
+                  <input type="text" class="form-control" id="negara" name="negara" placeholder="Masukkan Negara">
                   <div class="text-danger">
-                    @error('age')
+                    @error('negara')
                       {{ $message }}
                     @enderror
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="club">Club</label>
-                  <input type="text" class="form-control" id="club" name="club" placeholder="Enter Club">
+                  <label for="usia">Usia</label>
+                  <input type="number" class="form-control" id="usia" name="usia" placeholder="Masukkan Usia Pemain">
                   <div class="text-danger">
-                    @error('club')
+                    @error('usia')
                       {{ $message }}
                     @enderror
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Position</label>
-                  <input type="text" class="form-control" id="position" name="position" placeholder="Enter Name">
+                  <label for="klub">Klub</label>
+                  <input type="text" class="form-control" id="klub" name="klub" placeholder="Masukkan Klub">
                   <div class="text-danger">
-                    @error('position')
+                    @error('klub')
+                      {{ $message }}
+                    @enderror
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="posisi">Posisi</label>
+                  <input type="text" class="form-control" id="posisi" name="posisi" placeholder="Masukkan Posisi Pemain">
+                  <div class="text-danger">
+                    @error('posisi')
                       {{ $message }}
                     @enderror
                   </div>
@@ -65,8 +74,8 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <a href="/player" class="btn btn-primary">Back</a>
+                <input type="submit" class="btn btn-primary" value="Simpan">
+                <a href="/pemain" class="btn btn-primary">Kembali</a>
               </div>
             </form>
           </div>

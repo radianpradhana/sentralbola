@@ -2,9 +2,9 @@
   <!-- Logo -->
   <a href="{{asset('template')}}/index2.html" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini">PLY</span>
+    <span class="logo-mini">SNB</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg">SIPLAYER</span>
+    <span class="logo-lg">SENTRALBOLA</span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">
@@ -19,7 +19,7 @@
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="{{asset('template')}}/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-            <span class="hidden-xs">{{ Auth::user()->name }}</span> 
+            <span class="hidden-xs">{{ Auth::user()->nama }}</span> 
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
@@ -27,12 +27,7 @@
               <img src="{{asset('template')}}/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
               <p>
-                {{ Auth::user()->name }} -
-                  @if(auth()->user()->level==1)
-                    Admin
-                  @else
-                    User
-                  @endif
+                {{ Auth::user()->nama }} - {{ Auth::user()->jabatan }}
               </p>
             </li>
             <!-- Menu Footer-->

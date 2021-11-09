@@ -8,15 +8,15 @@
       </div>
       <div class="pull-left info">
         <p>Welcome,</p>
-        <p><b>{{ Auth::user()->name }}</b></p>
+        <p><b>{{ Auth::user()->nama }}</b></p>
       </div>
     </div>
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MENU UTAMA</li>
       <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
-      @if(auth()->user()->level==1)
-      <li class="treeview {{ request()->is('player') ? 'active' : '' }}">
+      @if(auth()->user()->jabatan=="Admin")
+      <li class="treeview {{ request()->is('pemain') ? 'active' : '' }}">
         <a href="#">
           <i class="glyphicon glyphicon-user"></i>
           <span>Pemain</span>
@@ -25,7 +25,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="/player"><i class="fa fa-circle-o"></i> Master Data Pemain</a></li>
+          <li><a href="/pemain"><i class="fa fa-circle-o"></i> Master Data Pemain</a></li>
         </ul>
       </li>
       @endif
